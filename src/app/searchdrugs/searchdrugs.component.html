@@ -1,0 +1,47 @@
+
+<div>
+  <h3>Get Available Stock by ID</h3>
+  <input type="number" [(ngModel)]="id" placeholder="Enter ID">
+  <button (click)="getAvailableStockById()">Get Stock by ID</button>
+</div>
+
+<div>
+  <h3>Search Available Stock by Drug Name</h3>
+  <input type="text" [(ngModel)]="drugName" placeholder="Enter Drug Name">
+  <button (click)="searchAvailableStockByDrugName()">Search by Drug Name</button>
+</div>
+
+<div>
+  <h3>Search Available Stock by Batch ID</h3>
+  <input type="text" [(ngModel)]="batchid" placeholder="Enter Batch ID">
+  <button (click)="getAvailableStockByBatchId()">Search by Batch ID</button>
+</div>
+
+<div *ngIf="searchResults">
+  <h3>Search Results</h3>
+  <table class="search-results-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Drug Name</th>
+        <th>Batch ID</th>
+        <th>Supplier Email</th>
+        <th>Quantity</th>
+        <th>Expiry Date</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let result of searchResults">
+        <td>{{ result.id }}</td>
+        <td>{{ result.batchId }}</td>
+        <td>{{ result.drugName }}</td>
+        <td>{{ result.supplierEmail }}</td>
+        <td>{{ result.quantity }}</td>
+        <td>{{ result.expiryDate }}</td>
+        <td>{{ result.price }}</td>
+        
+      </tr>
+    </tbody>
+  </table>
+</div>

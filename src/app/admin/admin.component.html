@@ -1,0 +1,79 @@
+
+<h1 class="welcome-container">
+  <img class="logo" src="./assets/img/admin1.png" alt="Logo">
+
+  Welcome, Admin</h1>
+ 
+  <button  class="btn-logout" (click)="logout()">Logout</button>
+<h2 class="subheading">Please select an option to proceed further:</h2>
+<div class="dashboard">
+
+    <div class="card" (click)="navigateTo('view-drugs')">
+      <img src="./assets/img/capsules.png"  alt="View Drugs" class="card-image" >
+      <h2>View Drugs</h2>
+      <p>View the list of available drugs</p>
+    </div>
+  
+    <div class="card" (click)="navigateTo('add-drugs')">
+      <img src="./assets/img/slider/img-5.jpg"  alt="View Drugs" class="card-image" >
+      <h2>Add Drugs</h2>
+      <p>Add new drugs to the inventory</p>
+    </div>
+  
+    <div class="card" (click)="navigateTo('delete-drugs')">
+      <img src="./assets/img/slider/img-5.jpg"  alt="View Drugs" class="card-image" >
+      <h2>Delete Drugs</h2>
+      <p>Delete drugs from the inventory</p>
+    </div>
+  
+    <div class="card" (click)="navigateTo('search-drugs')">
+      <img src="./assets/img/slider/img-7.png"  alt="View Drugs" class="card-image" >
+      <h2>Search Drugs</h2>
+      <p>Search for drugs in the inventory</p>
+    </div>
+
+    <div class="card" (click)="navigateTo('edit-drugs')">
+      <img src="./assets/img/logo1.png"  alt="View Drugs" class="card-image" >
+      <h2>Edit Drugs</h2>
+      <p>Edit the Current Drugs Present in the System</p>
+    </div>
+  
+    <div class="card" (click)="navigateTo('view-suppliers')">
+      <img src="./assets/img/logo1.png"  alt="View Drugs" class="card-image" >
+      <h2>View Suppliers</h2>
+      <p>View the list of suppliers</p>
+    </div>
+  
+    <div class="card" (click)="navigateTo('edit-suppliers')">
+      <img src="./assets/img/logo1.png"  alt="View Drugs" class="card-image" >
+      <h2>Edit Suppliers</h2>
+      <p>Edit Present  suppliers in the system</p>
+    </div>
+  
+    <div class="card" (click)="navigateTo('delete-suppliers')">
+      <img src="./assets/img/logo1.png"  alt="View Drugs" class="card-image" >
+      <h2>Delete Suppliers</h2>
+      <p>Delete suppliers from the system</p>
+    </div>
+  
+    
+  
+    <div class="card" (click)="navigateTo('verify-doctors-order')">
+      <img src="./assets/img/doc12.jpg"  alt="Verifyorder" class="card-image" >
+      <h2>Verify Doctor's Order</h2>
+      <p>Validate or verify doctor's orders</p>
+    </div>
+  
+    <div class="card" (click)="navigateTo('view-sales-report')">
+      <img src="./assets/img/wap.jpg"  alt="salesrepor" class="card-image" >
+      <h2>View Sales Report</h2>
+      <p>Generate and view sales reports</p>
+    </div>
+  
+    <div class="card" (click)="navigateTo('pickup-order')">
+      <img src="./assets/img/empty.jpg"  alt="pickuporder" class="card-image" >
+      <h2>Pickup Order</h2>
+      <p>Manage orders ready for pickup</p>
+    </div>
+  </div>
+

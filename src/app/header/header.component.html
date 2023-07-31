@@ -1,0 +1,34 @@
+
+<header>
+  <div class="logo">
+    <a routerLink="" routerLinkActive="active">
+    <img src="https://www.sarasolutions.in/assets/images/products/pharm1.png" alt="Pharmacy Management System Logo">
+  </a>
+  </div>
+  <div class="headline">
+    <h1>Welcome to the MedTech PVT Limited</h1>
+  </div>
+  <div class="actions">
+    <div class="login" *ngIf="login">
+      <a routerLink="login" routerLinkActive="active">
+        <button>Login</button>
+      </a>
+    </div>
+    <div class="login" *ngIf="!login">
+      <a routerLink="login" routerLinkActive="active">
+      <button (click)=logout() >Logout</button>
+    </a>
+    </div>
+  
+    <div class="register">
+      <a routerLink="reg" routerLinkActive="active">
+        <button>Register</button>
+      </a>
+    </div>
+    <div class="register">
+      <a routerLink="home">
+        <button>Home</button>
+      </a>
+    </div>
+  </div>
+</header>

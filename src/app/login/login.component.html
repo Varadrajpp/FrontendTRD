@@ -1,0 +1,82 @@
+
+
+
+
+
+
+
+
+
+
+
+
+<body>
+<div class="container">
+    <div class="screen">
+		 <div class="screen__content">
+		
+         <form class="login">
+		   <h2 class="text-center">Welcome Back!</h2>
+		   <div class="login__field">
+			<i class="login__icon fas fa-user"></i>
+			<input type="text" class="login__input" id="username" name="username" placeholder="User name / Email" [(ngModel)]="username">
+			
+		  </div>
+		  <div class="login__field">
+			<i class="login__icon fas fa-lock"></i>
+			<input type="password" class="login__input" placeholder="Password" id="password" name="password" [(ngModel)]="password">
+			
+		  </div>
+		  <div class="login__field">
+			<select id="role" name="role" class="login__input" [(ngModel)]="role">
+				<option value="" disabled selected hidden>Select Role</option>
+			  <option value="ADMIN">Admin</option>
+			  <option value="DOCTOR">Doctor</option>
+			</select>
+		  </div>
+		  <button class="button login__submit" (click)="login()">
+			<span class="button__text">Log In Now</span>
+			<i class="button__icon fas fa-chevron-right"></i>
+		  </button>				
+	
+	      <br>
+	  
+	      <p class="signup-link">Don't have an account? <a routerLink="/register">Sign up</a></p>
+	      </form>
+
+	      <div class="social-login">
+		  <br>
+		  <br>
+		  <h3>Log in Via</h3>
+		  <div class="social-icons">
+			<a href="#" class="social-login__icon fab fa-instagram"></a>
+			<a href="#" class="social-login__icon fab fa-facebook"></a>
+			<a href="#" class="social-login__icon fab fa-twitter"></a>
+		   </div>
+	      </div>
+           
+        </div> 
+    </div>
+</div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

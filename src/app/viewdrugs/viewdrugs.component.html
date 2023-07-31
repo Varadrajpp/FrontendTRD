@@ -1,0 +1,21 @@
+<h2>Available Stock</h2>
+<br>
+<div class="card-container">
+  <div *ngFor="let stock of availableStockList" class="card">
+    <div class="card-content">
+      <h3>Batch ID: {{ stock.batchId }}</h3>
+      <p><strong>Drug Name:</strong> {{ stock.drugName }}</p>
+      <p><strong>Supplier Email:</strong> {{ stock.supplierEmail }}</p>
+      <p><strong>Quantity:</strong> {{ stock.quantity }}</p>
+      <p><strong>Expiry Date:</strong> {{ stock.expiryDate }}</p>
+      <p><strong>Price:</strong> {{ stock.price }}</p>
+    </div>
+    <div class="card-actions">
+      <br>
+      <br>
+      <button>
+        <a routerLink="/buy" [queryParams]="{ batchId: stock.batchId, price: stock.price, quantity: stock.quantity }">Buy Drug</a>
+      </button>
+    </div>
+  </div>
+</div>

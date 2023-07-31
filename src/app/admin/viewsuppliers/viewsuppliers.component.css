@@ -1,0 +1,33 @@
+/* view-supplier.component.css */
+.supplier-card {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  .supplier-info {
+    margin-bottom: 5px;
+  }
+  
+  .supplier-email {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .drug-name {
+    font-size: 14px;
+  }
+  
+  .edit-form input {
+    margin-bottom: 5px;
+  }
+  
+  .edit-form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  

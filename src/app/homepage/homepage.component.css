@@ -1,0 +1,161 @@
+/* styles.css */
+
+/* Reset some default styles */
+body, h1, h2, h3, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set a background and font styles */
+.landing-page {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  background-image: url('/assets/img/slider/img-4.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #333;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Header styles */
+header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* How It Works section */
+.how-it-works {
+  margin-bottom: 40px;
+}
+
+.how-it-works h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.steps {
+  display: flex;
+  justify-content: space-around;
+}
+
+.step {
+  max-width: 200px;
+}
+
+.step img {
+  width: 80px;
+  height: 80px;
+}
+
+.step p {
+  font-size: 16px;
+}
+
+/* Features section */
+.features h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.features ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.features li {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+/* Call-to-action section */
+.call-to-action h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #007bff;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+}
+
+
+/* styles.css */
+
+/* Existing styles */
+/* ... */
+
+/* Image Slider section */
+.image-slider {
+  margin-top: 40px;
+}
+
+.image-slider h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.slider-container {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  max-width: 800px; /* Set the maximum width of the slider */
+  margin: 0 auto;
+}
+
+.slider-container img {
+  width: 100%;
+  height: 300px; /* Set the height of the slider images */
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: slideAnimation 14s infinite; /* Adjust the time (14s) for desired interval */
+}
+
+@keyframes slideAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  14.29% {
+    transform: translateX(-100%);
+  }
+  28.57% {
+    transform: translateX(-200%);
+  }
+  42.86% {
+    transform: translateX(-300%);
+  }
+  57.14% {
+    transform: translateX(-400%);
+  }
+  71.43% {
+    transform: translateX(-500%);
+  }
+  85.71% {
+    transform: translateX(-600%);
+  }
+  100% {
+    transform: translateX(-700%);
+  }
+}

@@ -1,0 +1,8 @@
+<div>
+    <h3>Order Delivery</h3>
+    <label for="batchId">Batch ID:</label>
+    <input type="text" id="batchId" [(ngModel)]="batchId">
+    <button (click)="markStockAsDelivered()">Mark as Delivered</button>
+    <p>{{ responseMessage }}</p>
+  </div>
+  

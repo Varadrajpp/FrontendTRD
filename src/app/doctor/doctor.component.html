@@ -1,0 +1,33 @@
+
+<h1 class="welcome-container">
+  <img class="logo" src="./assets/img/doc12.jpg" alt="Logo">
+
+  Welcome, Doctor</h1>
+  <button class="logout-button" routerLink="/home">Logout</button>
+  <button  class="btn-logout" (click)="logout()">Logout</button>
+<h2 class="subheading">Please select an option to proceed further:</h2>
+<div class="dashboard">
+    <div class="card" (click)="navigateTo('view-drugs')">
+      <img src="./assets/img/capsules.png"  alt="View Drugs" class="card-image" >
+      <h2>View Drugs</h2>
+      <p>View the list of available drugs</p>
+    </div>
+  
+    <div class="card" (click)="navigateTo('search-drugs')">
+      <img src="./assets/img/capsules.png"  alt="View Drugs" class="card-image" >
+      <h2>Search Drugs</h2>
+      <p>Search for drugs in the inventory</p>
+    </div>
+  
+    
+    <a href="https://www.1mg.com/?wpsrc=Google+Organic+Search">
+      
+      <div class="card" >
+        <img src="./assets/img/capsules.png"  alt="View Drugs" class="card-image" >
+        <h2>Know More About These Drugs</h2>
+        <p>Get detailed information about the drugs</p>
+      </div>
+    </a>
+  </div>
+ 
+  

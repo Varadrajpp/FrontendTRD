@@ -1,0 +1,23 @@
+.order-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .order-card {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 300px;
+  }
+  
+  .order-details {
+    margin-bottom: 1rem;
+  }
+  
+  .order-details h3 {
+    margin: 0;
+  }
+  
+  /* Additional CSS styles as per your design preferences */
+  

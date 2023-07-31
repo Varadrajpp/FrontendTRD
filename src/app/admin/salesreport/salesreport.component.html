@@ -1,0 +1,26 @@
+<table>
+  <thead>
+    <tr>
+      <th>Batch ID</th>
+      <th>Drug Name</th>
+      <th>Supplier Email</th>
+      <th>Quantity</th>
+      <th>Expiry Date</th>
+      <th>Price</th>
+      <th>Total Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let soldStock of salesReportData">
+      <td>{{ soldStock.batchId }}</td>
+      <td>{{ soldStock.drugName }}</td>
+      <td>{{ soldStock.supplierEmail }}</td>
+      <td>{{ soldStock.quantity }}</td>
+      <td>{{ soldStock.expiryDate }}</td>
+      <td>{{ soldStock.price }}</td>
+      <td>{{ soldStock.totalPrice }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<button (click)="generateSalesReport()">Generate Report</button>

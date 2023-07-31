@@ -1,0 +1,13 @@
+<div *ngFor="let supplier of supplierList">
+  <div class="supplier-card">
+    <div class="supplier-info">
+      <h3 class="supplier-email">{{ supplier.supplierEmail }}</h3>
+      <p class="drug-name">Drug Name: {{ supplier.drugName }}</p>
+    </div>
+    <div class="edit-form">
+      <input [(ngModel)]="supplier.updatedSupplierEmail" placeholder="New Supplier Email">
+      <input [(ngModel)]="supplier.updatedDrugName" placeholder="New Drug Name">
+      <button (click)="editSupplier(supplier)">Save</button>
+    </div>
+  </div>
+</div>

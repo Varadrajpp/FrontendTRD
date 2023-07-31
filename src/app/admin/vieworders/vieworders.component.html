@@ -1,0 +1,20 @@
+<h1>Orders</h1>
+<div class="order-cards">
+  <div *ngFor="let order of orders" class="order-card">
+    <div class="order-details">
+      <h3>Order ID: {{ order.id }}</h3>
+      <p>Doctor Name: {{ order.doctorName }}</p>
+      <p>Doctor Contact Number: {{ order.doctorContactNumber }}</p>
+      <p>Doctor Email: {{ order.doctorEmail }}</p>
+      <p>Customer Name: {{ order.customerName }}</p>
+      <p>Customer Contact Number: {{ order.customerContactNumber }}</p>
+      <p>Customer Email: {{ order.customerEmail }}</p>
+      <p>Drug Name: {{ order.drugName }}</p>
+      <p>Drug Price: {{ order.drugPrice }}</p>
+      <p>Quantity: {{ order.quantity }}</p>
+      <p>Total Price: {{ order.totalPrice }}</p>
+      <p>Pickup Date: {{ order.pickupDate | date }}</p>
+      <!-- Display other order details as desired -->
+    </div>
+  </div>
+</div>

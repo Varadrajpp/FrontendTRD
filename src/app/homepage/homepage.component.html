@@ -1,0 +1,50 @@
+<!-- landing-page.component.html -->
+
+<div class="landing-page">
+  <header>
+    <h1>Online Pharmacy Management System</h1>
+    <p>Order your medicines online with ease!</p>
+  </header>
+  <main>
+    <section class="how-it-works">
+      <h2>How It Works</h2>
+      <br>
+      <div class="steps">
+        <div class="step">
+          <img src="./assets/img/capsules.png" alt="Step 1 Icon">
+          <p>Search for your medicines and add them to your cart.</p>
+        </div>
+        <div class="step">
+          <img src="./assets/img/cart1.png" alt="Step 2 Icon">
+          <p>Provide your delivery details and choose a payment method.</p>
+        </div>
+        <div class="step">
+          <img src="./assets/img/dr.jpg" alt="Step 3 Icon">
+          <p>Receive your medicines at your doorstep.</p>
+        </div>
+      </div>
+    </section>
+    <section class="features">
+      <h2>Key Features</h2>
+      <ul>
+        <li>Wide range of medicines available</li>
+        <li>Easy search and navigation</li>
+        <li>Secure payment options</li>
+        <li>Fast and reliable delivery</li>
+        <li>User-friendly interface</li>
+      </ul>
+    </section>
+    <br>
+    <section class="call-to-action">
+      <h2>Start Ordering Today</h2>
+      <a routerLink="/login" class="btn btn-primary">Login</a>
+      <a routerLink="/reg" class="btn btn-secondary">Sign Up</a>
+    </section>
+  </main>
+  <section class="image-slider">
+    <h2>Featured Images</h2>
+    <div class="slider-container">
+      <img *ngFor="let image of images" [src]="image" alt="Featured Image">
+    </div>
+  </section>
+</div>

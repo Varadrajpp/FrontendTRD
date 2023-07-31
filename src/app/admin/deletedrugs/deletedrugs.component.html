@@ -1,0 +1,19 @@
+<h2>Delete Drugs</h2>
+
+<!-- Delete by ID -->
+<div class="form-group">
+<input type="number" [(ngModel)]="id" placeholder="Enter ID">
+<button (click)="deleteById()">Delete by ID</button>
+</div>
+
+<!-- Delete by Drug Name -->
+<div class="form-group">
+<input type="text" [(ngModel)]="drugName" placeholder="Enter Drug Name">
+<button (click)="deleteByDrugName()">Delete by Drug Name</button>
+</div>
+
+<!-- Delete by Batch ID -->
+<div class="form-group">
+<input type="text" [(ngModel)]="batchId" placeholder="Enter Batch ID">
+<button (click)="deleteByBatchId()">Delete by Batch ID</button>
+</div>
