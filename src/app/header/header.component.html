@@ -2,7 +2,10 @@
 <header>
   <div class="logo">
     <a routerLink="" routerLinkActive="active">
+
+      <button (click)="redirectlog()">
     <img src="https://www.sarasolutions.in/assets/images/products/pharm1.png" alt="Pharmacy Management System Logo">
+  </button>
   </a>
   </div>
   <div class="headline">
@@ -11,7 +14,8 @@
   <div class="actions">
     <div class="login" *ngIf="login">
       <a routerLink="login" routerLinkActive="active">
-        <button>Login</button>
+
+        <button (click)="loginlog()">Login</button>
       </a>
     </div>
     <div class="login" *ngIf="!login">
@@ -22,12 +26,12 @@
   
     <div class="register">
       <a routerLink="reg" routerLinkActive="active">
-        <button>Register</button>
+        <button (click)="registerlog()">Register</button>
       </a>
     </div>
     <div class="register">
       <a routerLink="home">
-        <button>Home</button>
+        <button (click)="homelog()">Home</button>
       </a>
     </div>
   </div>

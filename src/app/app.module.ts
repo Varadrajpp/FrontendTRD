@@ -37,6 +37,7 @@ import { LoginService } from './login.service';
 import { TokenInterceptorService } from './services/TokenInterceptorService.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
 
 @NgModule({
   declarations: [
@@ -77,7 +78,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     HttpClientModule,
     NgxExtendedPdfViewerModule,
     BrowserAnimationsModule,
-    MatSnackBarModule
+    MatSnackBarModule, 
+    LoggerModule.forRoot({ level: NgxLoggerLevel.DEBUG, serverLogLevel: NgxLoggerLevel.ERROR }),
     
   ],
   providers: [LoginService,{

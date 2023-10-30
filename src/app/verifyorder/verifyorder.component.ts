@@ -10,7 +10,7 @@ import { OrderService } from '../services/OrderService.service';
 export class VerifyorderComponent {
 
   orders!: CombinedOrder[];
-
+  isVerified!: boolean;
   constructor(private orderService: OrderService) { }
 
   ngOnInit() {
@@ -32,10 +32,11 @@ export class VerifyorderComponent {
     this.orderService.verifyDoctorExists(order.doctorName).subscribe(
       (isVerified: boolean) => {
         if (isVerified) {
-          // Perform logic for a verified order
+          
           console.log('Order is verified');
+
         } else {
-          // Perform logic for an unverified order
+          
           console.log('Order is not verified');
         }
       },

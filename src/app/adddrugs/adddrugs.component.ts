@@ -17,7 +17,7 @@ export class AdddrugsComponent {
 
   addDrug(): void {
     const emptyDrug: AvailableStock = new AvailableStock();
-    this.availableStockList.push(emptyDrug);
+    this.availableStockList.push(this.newDrug);
   }
 
   saveDrugs(): void {

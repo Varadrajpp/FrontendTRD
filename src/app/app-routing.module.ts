@@ -25,6 +25,7 @@ const routes: Routes = [
  // {path:'/',redirectTo:'/home',pathMatch:'full'},
    
    {path:'',component:HomepageComponent},
+   {path:'home',component:HomepageComponent},
   { path: 'login', component: LoginComponent },
    { path: 'reg', component: RegisterComponent },
    { path: 'search', component: SearchdrugsComponent },
@@ -52,7 +53,7 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     data: { roles: ['doctor'] } // Specify allowed roles for this route
   },
-  { path: '**', redirectTo: '' },
+  
    { path: 'customer/search-drugs',component: SearchdrugsComponent }, 
    { path: 'customer/view-drugs',component: ViewdrugsComponent }, 
    { path: 'customer/buy-drugs',component: BuydrugsComponent },

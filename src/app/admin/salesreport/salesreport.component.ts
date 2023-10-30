@@ -18,7 +18,7 @@ export class SalesreportComponent {
     const headers = new HttpHeaders({ responseType: 'blob' as 'json' });
 
     this.http
-      .get('http://localhost:9090/inventory/sold-stock/report', {
+      .get('http://localhost:8081/inventory/sold-stock/report', {
         headers,
         responseType: 'blob',
         observe: 'response', // Add this line to access the full response

@@ -16,6 +16,9 @@
       <p>Pickup Date: {{ order.pickupDate | date }}</p>
       <!-- Display other order details as desired -->
       <button (click)="verifyOrder(order)">Verify</button>
+      <div *ngIf="isVerified===true" >
+        <p class="verify">Verified Order Successfullly</p>
+      </div>
     </div>
   </div>
 </div>

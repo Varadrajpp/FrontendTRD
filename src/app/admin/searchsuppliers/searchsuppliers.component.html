@@ -1,1 +1,8 @@
-<p>searchsuppliers works!</p>
+<div class="supplier-cards">
+    <div class="supplier-card" *ngFor="let supplier of suppliers">
+      <div class="supplier-details">
+        <h3 class="supplier-email">{{ supplier.supplierEmail }}</h3>
+        <p class="drug-name">Drug Name: {{ supplier.drugName }}</p>
+      </div>
+    </div>
+  </div>

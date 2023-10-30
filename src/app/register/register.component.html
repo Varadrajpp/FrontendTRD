@@ -220,64 +220,67 @@
 
 
 <div class="register-container">
-
   <h2>Register</h2>
-
-  <form class="register-form" (ngSubmit)="registerUser()">
-
+  <form class="register-form" #registerForm="ngForm" (ngSubmit)="registerUser(registerForm)">
+    <!-- Email field -->
     <div class="form-group">
-
       <label for="email">Email:</label>
-
-      <input type="email" id="email" name="email" [(ngModel)]="email" required>
-
+      <input type="email" id="email" name="email" [(ngModel)]="email" required email>
+      <div *ngIf="registerForm.controls['email'].touched && registerForm.controls['email'].hasError('required')" class="error">
+        Email is required.
+      </div>
+      <div *ngIf="registerForm.controls['email'].touched && registerForm.controls['email'].hasError('email')" class="error">
+        Please enter a valid email address.
+      </div>
     </div>
 
+    <!-- Username field -->
     <div class="form-group">
-
       <label for="username">Username:</label>
-
       <input type="text" id="username" name="username" [(ngModel)]="name" required>
-
+      <div *ngIf="registerForm.controls['username'].touched && registerForm.controls['username'].hasError('required')" class="error">
+        Username is required.
+      </div>
     </div>
 
+    <!-- Password field -->
     <div class="form-group">
-
       <label for="password">Password:</label>
-
-      <input type="password" id="password"  name="password" [(ngModel)]="password" required>
-
+      <input type="password" id="password" name="password" [(ngModel)]="password" required>
+      <div *ngIf="registerForm.controls['password'].touched && registerForm.controls['password'].hasError('required')" class="error">
+        Password is required.
+      </div>
     </div>
 
+    <!-- Confirm Password field -->
     <div class="form-group">
-
       <label for="confirmPassword">Confirm Password:</label>
-
       <input type="password" id="confirmPassword" name="confirmPassword" [(ngModel)]="confirmPassword" required>
-
+      <div *ngIf="registerForm.controls['confirmPassword'].touched && registerForm.controls['confirmPassword'].hasError('required')" class="error">
+        Confirm Password is required.
+      </div>
+      <div *ngIf="registerForm.controls['confirmPassword'].touched && registerForm.controls['confirmPassword'].hasError('passwordMismatch')" class="error">
+        Passwords do not match.
+      </div>
     </div>
 
-    <!-- <div *ngIf="password && confirmPassword && password !== confirmPassword" class="error">Passwords do not match.</div> -->
-
-    
+    <!-- Role field -->
     <div class="form-group">
       <label for="role">Role</label>
-      <select id="role" name="role" style="height: 30px; width: 320px" [(ngModel)]="roles">
+      <select id="role" name="role" style="height: 30px; width: 320px" [(ngModel)]="roles" required>
         <option value="ADMIN">ADMIN</option>
         <option value="DOCTOR">DOCTOR</option>
-        
       </select>
-      
+      <div *ngIf="registerForm.controls['role'].touched && registerForm.controls['role'].hasError('required')" class="error">
+        Role is required.
+      </div>
     </div>
-    <button type="submit" class="btn" [disabled]="password !== confirmPassword">Register</button>
 
-
+    <!-- Submit button -->
+    <button type="submit" class="btn-register" [disabled]="!registerForm.valid">Register</button>
   </form>
 
   <div *ngIf="!errorflag">
-
-    <p class="text-success">{{ successmsg }} </p>
-
+    <p class="text-success">{{ successmsg }}</p>
   </div>
-
 </div>

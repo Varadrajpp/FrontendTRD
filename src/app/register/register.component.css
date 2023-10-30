@@ -1,4 +1,24 @@
-New styles for the layout
+.register-container{
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  background-image: linear-gradient(to bottom right, #89cff0, #f0a0b3);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  max-width: 400px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+}
 
 body {
   margin: 0;

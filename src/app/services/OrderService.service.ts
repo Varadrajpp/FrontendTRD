@@ -29,7 +29,7 @@ export class OrderService {
 
 
 	  getAllCombinedOrders() {
-		const url = `${this.apiUrl}/combined-orders`;
+		const url = `${this.apiUrl}/combined`;
 		return this.http.get<CombinedOrder[]>(url);
 	  }
 
